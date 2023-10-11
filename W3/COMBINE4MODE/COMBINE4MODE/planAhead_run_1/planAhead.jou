@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Sep 13 09:11:31 2023
+# Process ID: 3652
+# Log file: G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/planAhead_run_1/planAhead.log
+# Journal file: G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin N17 [get_ports {freq_sel[1]}]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports {freq_sel[0]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {mode_sel[1]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {mode_sel[0]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {OUT[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {OUT[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {OUT[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {OUT[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {OUT[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {OUT[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {OUT[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {OUT[7]}]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+save_constraints
+startgroup
+set_property package_pin D18 [get_ports reset]
+endgroup
+set_property is_loc_fixed false [get_ports [list  reset]]
+set_property is_loc_fixed true [get_ports [list  reset]]
+save_constraints
+set_property drive 8 [get_ports [list {OUT[7]} {OUT[6]} {OUT[5]} {OUT[4]} {OUT[3]} {OUT[2]} {OUT[1]} {OUT[0]}]]
+save_constraints

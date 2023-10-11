@@ -1,0 +1,493 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: TOP.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : TOP
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ShiftLed.v" in library work
+Compiling verilog file "Divide4f.v" in library work
+Module <SHIFT_8LED> compiled
+Compiling verilog file "Top.v" in library work
+Module <dived2f> compiled
+Module <TOP> compiled
+No errors in compilation
+Analysis of file <"TOP.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <TOP> in library <work>.
+
+Analyzing hierarchy for module <SHIFT_8LED> in library <work>.
+
+Analyzing hierarchy for module <dived2f> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <TOP>.
+Module <TOP> is correct for synthesis.
+ 
+Analyzing module <SHIFT_8LED> in library <work>.
+Module <SHIFT_8LED> is correct for synthesis.
+ 
+Analyzing module <dived2f> in library <work>.
+Module <dived2f> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SHIFT_8LED>.
+    Related source file is "ShiftLed.v".
+    Found finite state machine <FSM_0> for signal <temp>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | temp$not0000              (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000000000000000000000000001               |
+    | Power Up State     | 00000000000000000000000000000000               |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <out>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <SHIFT_8LED> synthesized.
+
+
+Synthesizing Unit <dived2f>.
+    Related source file is "Divide4f.v".
+    Found 1-bit register for signal <q>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit adder for signal <counter$addsub0000> created at line 42.
+    Found 33-bit comparator greater for signal <q$cmp_gt0000> created at line 35.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <dived2f> synthesized.
+
+
+Synthesizing Unit <TOP>.
+    Related source file is "Top.v".
+Unit <TOP> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 10
+ 1-bit register                                        : 9
+ 32-bit register                                       : 1
+# Comparators                                          : 1
+ 33-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <shift_inst/temp/FSM> on signal <temp[1:1]> with sequential encoding.
+----------------------------------------------
+ State                            | Encoding
+----------------------------------------------
+ 00000000000000000000000000000000 | 0
+ 00000000000000000000000000000001 | 1
+----------------------------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+# Comparators                                          : 1
+ 33-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <counter_1> (without init value) has a constant value of 0 in block <dived2f>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <counter_0> of sequential type is unconnected in block <dived2f>.
+
+Optimizing unit <TOP> ...
+
+Optimizing unit <SHIFT_8LED> ...
+
+Optimizing unit <dived2f> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TOP.ngr
+Top Level Output File Name         : TOP
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 161
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 29
+#      LUT2                        : 32
+#      LUT3                        : 9
+#      LUT4                        : 13
+#      LUT4_L                      : 1
+#      MUXCY                       : 39
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 40
+#      FDC                         : 38
+#      FDCE                        : 1
+#      FDPE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 2
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       47  out of   4656     1%  
+ Number of Slice Flip Flops:             40  out of   9312     0%  
+ Number of 4 input LUTs:                 89  out of   9312     0%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)         | Load  |
+-----------------------------------+-------------------------------+-------+
+d2f_inst/q                         | NONE(shift_inst/temp_FSM_FFd1)| 9     |
+clk                                | BUFGP                         | 31    |
+-----------------------------------+-------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 40    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.289ns (Maximum Frequency: 159.008MHz)
+   Minimum input arrival time before clock: 5.539ns
+   Maximum output required time after clock: 4.571ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'd2f_inst/q'
+  Clock period: 4.734ns (frequency: 211.238MHz)
+  Total number of paths / destination ports: 48 / 10
+-------------------------------------------------------------------------
+Delay:               4.734ns (Levels of Logic = 3)
+  Source:            shift_inst/out_6 (FF)
+  Destination:       shift_inst/temp_FSM_FFd1 (FF)
+  Source Clock:      d2f_inst/q rising
+  Destination Clock: d2f_inst/q rising
+
+  Data Path: shift_inst/out_6 to shift_inst/temp_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.844  shift_inst/out_6 (shift_inst/out_6)
+     LUT4:I0->O            1   0.704   0.595  shift_inst/temp_not000122 (shift_inst/temp_not000122)
+     LUT3:I0->O            1   0.704   0.000  shift_inst/temp_not000136_G (N3)
+     MUXF5:I1->O           1   0.321   0.420  shift_inst/temp_not000136 (shift_inst/temp_not0001)
+     FDPE:CE                   0.555          shift_inst/temp_FSM_FFd1
+    ----------------------------------------
+    Total                      4.734ns (2.875ns logic, 1.859ns route)
+                                       (60.7% logic, 39.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.289ns (frequency: 159.008MHz)
+  Total number of paths / destination ports: 1458 / 32
+-------------------------------------------------------------------------
+Delay:               6.289ns (Levels of Logic = 31)
+  Source:            d2f_inst/counter_3 (FF)
+  Destination:       d2f_inst/counter_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: d2f_inst/counter_3 to d2f_inst/counter_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  d2f_inst/counter_3 (d2f_inst/counter_3)
+     LUT1:I0->O            1   0.704   0.000  d2f_inst/Madd_counter_addsub0000_cy<3>_rt (d2f_inst/Madd_counter_addsub0000_cy<3>_rt)
+     MUXCY:S->O            1   0.464   0.000  d2f_inst/Madd_counter_addsub0000_cy<3> (d2f_inst/Madd_counter_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<4> (d2f_inst/Madd_counter_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<5> (d2f_inst/Madd_counter_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<6> (d2f_inst/Madd_counter_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<7> (d2f_inst/Madd_counter_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<8> (d2f_inst/Madd_counter_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<9> (d2f_inst/Madd_counter_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<10> (d2f_inst/Madd_counter_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<11> (d2f_inst/Madd_counter_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<12> (d2f_inst/Madd_counter_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<13> (d2f_inst/Madd_counter_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<14> (d2f_inst/Madd_counter_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<15> (d2f_inst/Madd_counter_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<16> (d2f_inst/Madd_counter_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<17> (d2f_inst/Madd_counter_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<18> (d2f_inst/Madd_counter_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<19> (d2f_inst/Madd_counter_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<20> (d2f_inst/Madd_counter_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<21> (d2f_inst/Madd_counter_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<22> (d2f_inst/Madd_counter_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<23> (d2f_inst/Madd_counter_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<24> (d2f_inst/Madd_counter_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<25> (d2f_inst/Madd_counter_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<26> (d2f_inst/Madd_counter_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<27> (d2f_inst/Madd_counter_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<28> (d2f_inst/Madd_counter_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<29> (d2f_inst/Madd_counter_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  d2f_inst/Madd_counter_addsub0000_cy<30> (d2f_inst/Madd_counter_addsub0000_cy<30>)
+     XORCY:CI->O           1   0.804   0.499  d2f_inst/Madd_counter_addsub0000_xor<31> (d2f_inst/counter_addsub0000<31>)
+     LUT2:I1->O            1   0.704   0.000  d2f_inst/counter_mux0000<0>1 (d2f_inst/counter_mux0000<0>)
+     FDC:D                     0.308          d2f_inst/counter_31
+    ----------------------------------------
+    Total                      6.289ns (5.168ns logic, 1.121ns route)
+                                       (82.2% logic, 17.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'd2f_inst/q'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.539ns (Levels of Logic = 4)
+  Source:            check (PAD)
+  Destination:       shift_inst/temp_FSM_FFd1 (FF)
+  Destination Clock: d2f_inst/q rising
+
+  Data Path: check to shift_inst/temp_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.218   0.995  check_IBUF (check_IBUF)
+     LUT3:I0->O            2   0.704   0.622  shift_inst/temp_not0001171 (shift_inst/temp_not0001171)
+     LUT4:I0->O            1   0.704   0.000  shift_inst/temp_not000136_F (N2)
+     MUXF5:I0->O           1   0.321   0.420  shift_inst/temp_not000136 (shift_inst/temp_not0001)
+     FDPE:CE                   0.555          shift_inst/temp_FSM_FFd1
+    ----------------------------------------
+    Total                      5.539ns (3.502ns logic, 2.037ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd2f_inst/q'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.571ns (Levels of Logic = 1)
+  Source:            shift_inst/out_3 (FF)
+  Destination:       LED<3> (PAD)
+  Source Clock:      d2f_inst/q rising
+
+  Data Path: shift_inst/out_3 to LED<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.591   0.708  shift_inst/out_3 (shift_inst/out_3)
+     OBUF:I->O                 3.272          LED_3_OBUF (LED<3>)
+    ----------------------------------------
+    Total                      4.571ns (3.863ns logic, 0.708ns route)
+                                       (84.5% logic, 15.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.71 secs
+ 
+--> 
+
+Total memory usage is 4499932 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

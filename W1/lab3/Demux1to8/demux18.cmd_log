@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W1/lab3/Demux1to8/demux18.xst" -ofn "G:/HK7/IClab/W1/lab3/Demux1to8/demux18.syr" 

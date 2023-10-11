@@ -1,0 +1,6 @@
+verilog work "add3.v"
+verilog work "HexBcd.v"
+verilog work "Counter.v"
+verilog work "ClockDiv.v"
+verilog work "../../driver/TM1638.v"
+verilog work "Top.v"

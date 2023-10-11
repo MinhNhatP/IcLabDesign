@@ -1,0 +1,3 @@
+verilog isim_temp "Blink.v"
+verilog isim_temp "testBlynk.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Oct 04 11:12:58 2023
+# Process ID: 9724
+# Log file: G:/HK7/IClab/W7/TM1638Shift/planAhead_run_1/planAhead.log
+# Journal file: G:/HK7/IClab/W7/TM1638Shift/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/HK7/IClab/W7/TM1638Shift/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin F8 [get_ports clko]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports dio]
+endgroup
+startgroup
+set_property package_pin E8 [get_ports stb]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+set_property iostandard LVCMOS33 [get_ports [list clko]]
+set_property iostandard LVCMOS33 [get_ports [list dio]]
+save_constraints

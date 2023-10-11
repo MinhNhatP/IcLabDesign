@@ -1,0 +1,8 @@
+verilog work "MODE4_SANGDON.v"
+verilog work "MODE3_LEDCHAY_TRAIPHAI.v"
+verilog work "MODE2_LEDSANGDAN_TATDAN.v"
+verilog work "MODE1_LEDCHOPTAT.v"
+verilog work "DIV_CLK_4_MODE.v"
+verilog work "TOP.v"
+verilog work "TEST_TOP.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

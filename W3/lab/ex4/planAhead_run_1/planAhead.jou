@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Wed Sep 13 07:39:54 2023
+# Process ID: 12388
+# Log file: G:/HK7/IClab/W3/lab/ex4/planAhead_run_1/planAhead.log
+# Journal file: G:/HK7/IClab/W3/lab/ex4/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source G:/HK7/IClab/W3/lab/ex4/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin F12 [get_ports {LED[0]}]
+endgroup
+startgroup
+set_property package_pin E12 [get_ports {LED[1]}]
+endgroup
+startgroup
+set_property package_pin E11 [get_ports {LED[2]}]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports {LED[3]}]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports {LED[4]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property package_pin E9 [get_ports {LED[6]}]
+endgroup
+startgroup
+set_property package_pin F9 [get_ports {LED[7]}]
+endgroup
+startgroup
+set_property package_pin D11 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {control[1]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {control[0]}]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin H18 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports UD]
+endgroup
+set_property is_loc_fixed false [get_ports [list  UD]]
+startgroup
+set_property package_pin N17 [get_ports UD]
+endgroup
+set_property drive 8 [get_ports [list {LED[7]} {LED[6]} {LED[5]} {LED[4]} {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+save_constraints

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Counter8bit/counter8bit.xst" -ofn "G:/HK7/IClab/W3/lab/Counter8bit/counter8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 counter8bit.ngc counter8bit.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter8bit_map.ncd counter8bit.ngd counter8bit.pcf 
+par -w -intstyle ise -ol high -t 1 counter8bit_map.ncd counter8bit.ncd counter8bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter8bit.twx counter8bit.ncd -o counter8bit.twr counter8bit.pcf 
+bitgen -intstyle ise -f counter8bit.ut counter8bit.ncd 

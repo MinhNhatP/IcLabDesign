@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/COMBINE4MODE/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/COMBINE4MODE/xst"
+elaborate
+-ifn DIV_CLK_4_MODE.prj
+-ifmt mixed

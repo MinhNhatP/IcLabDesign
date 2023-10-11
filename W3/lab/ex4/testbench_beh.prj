@@ -1,0 +1,5 @@
+verilog work "dived2f.v"
+verilog work "COUNTER.v"
+verilog work "TOP.v"
+verilog work "testbench.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

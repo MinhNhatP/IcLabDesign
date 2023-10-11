@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Divide50M/divide50m.xst" -ofn "G:/HK7/IClab/W3/lab/Divide50M/divide50m.syr" 

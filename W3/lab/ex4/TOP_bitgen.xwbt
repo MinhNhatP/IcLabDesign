@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\HK7\IClab\W3\lab\ex4\TOP.ncd
+OUTFILE=G:\HK7\IClab\W3\lab\ex4\TOP.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=G:\HK7\IClab\W3\lab\ex4
+LICENSE=WebPack
+USER_INFO=__0_0_0

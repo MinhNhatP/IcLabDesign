@@ -1,0 +1,21 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o G:/HK7/IClab/W3/New folder/Counter4bit/testcounter_isim_beh.exe -prj G:/HK7/IClab/W3/New folder/Counter4bit/testcounter_beh.prj work.testcounter work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "G:/HK7/IClab/W3/New folder/Counter4bit/counter4bit.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/New folder/Counter4bit/testcounter.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 160080 KB
+Fuse CPU Usage: 155 ms
+Compiling module counter4bit
+Compiling module testcounter
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable G:/HK7/IClab/W3/New folder/Counter4bit/testcounter_isim_beh.exe
+Fuse Memory Usage: 165556 KB
+Fuse CPU Usage: 187 ms

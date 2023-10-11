@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W5/lab/Counter7Seg/PhanMinhNhat.xst" -ofn "G:/HK7/IClab/W5/lab/Counter7Seg/PhanMinhNhat.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TOP.ucf -p xc3s500e-fg320-4 PhanMinhNhat.ngc PhanMinhNhat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o PhanMinhNhat_map.ncd PhanMinhNhat.ngd PhanMinhNhat.pcf 
+par -w -intstyle ise -ol high -t 1 PhanMinhNhat_map.ncd PhanMinhNhat.ncd PhanMinhNhat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml PhanMinhNhat.twx PhanMinhNhat.ncd -o PhanMinhNhat.twr PhanMinhNhat.pcf -ucf TOP.ucf 
+bitgen -intstyle ise -f PhanMinhNhat.ut PhanMinhNhat.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc PhanMinhNhat.ucf -p xc3s500e-fg320-4 PhanMinhNhat.ngc PhanMinhNhat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o PhanMinhNhat_map.ncd PhanMinhNhat.ngd PhanMinhNhat.pcf 
+par -w -intstyle ise -ol high -t 1 PhanMinhNhat_map.ncd PhanMinhNhat.ncd PhanMinhNhat.pcf 

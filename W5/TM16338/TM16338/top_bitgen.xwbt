@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\tnduy\Desktop\TM1\TM16338\top.ncd
+OUTFILE=C:\Users\tnduy\Desktop\TM1\TM16338\top.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\tnduy\Desktop\TM1\TM16338
+LICENSE=ISE
+USER_INFO=212666397_0_0_706

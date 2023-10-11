@@ -1,0 +1,5 @@
+verilog work "Blink.v"
+verilog work "../ex6/Shift1Led.v"
+verilog work "../ex5/ShiftLed.v"
+verilog work "../Divide4f/divide4f.v"
+verilog work "Top.v"

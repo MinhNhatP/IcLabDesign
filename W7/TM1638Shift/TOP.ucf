@@ -1,0 +1,15 @@
+
+
+NET "clk" LOC = C9;
+NET "clko" LOC = F8;
+NET "dio" LOC = C7;
+NET "stb" LOC = E8;
+
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clko" IOSTANDARD = LVCMOS33;
+NET "dio" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated IO constraints 
+
+NET "stb" IOSTANDARD = LVCMOS33;

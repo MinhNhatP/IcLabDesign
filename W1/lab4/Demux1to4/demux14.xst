@@ -1,0 +1,5 @@
+set -tmpdir "G:/HK7/IClab/W1/lab4/Demux1to4/xst/projnav.tmp"
+set -xsthdpdir "G:/HK7/IClab/W1/lab4/Demux1to4/xst"
+elaborate
+-ifn demux14.prj
+-ifmt mixed

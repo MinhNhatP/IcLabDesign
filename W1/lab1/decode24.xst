@@ -1,0 +1,5 @@
+set -tmpdir "G:/HK7/IClab/W1/lab1/xst/projnav.tmp"
+set -xsthdpdir "G:/HK7/IClab/W1/lab1/xst"
+elaborate
+-ifn decode24.prj
+-ifmt mixed

@@ -1,0 +1,520 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml Top.twx Top.ncd -o Top.twr Top.pcf -ucf Top.ucf
+
+Design file:              Top.ncd
+Physical constraint file: Top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 9114 paths analyzed, 422 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.826ns.
+--------------------------------------------------------------------------------
+
+Paths for end point lcd/lcd_code_3 (SLICE_X55Y42.SR), 85 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.174ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_2 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.826ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_2 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.YQ      Tcko                  0.652   lcd/Cs<3>
+                                                       lcd/Cs_2
+    SLICE_X49Y45.F3      net (fanout=51)       2.274   lcd/Cs<2>
+    SLICE_X49Y45.X       Tilo                  0.704   lcd/_COND_2<4>
+                                                       lcd/Msub__COND_2_Madd_xor<4>11
+    SLICE_X53Y69.BY      net (fanout=4)        2.359   lcd/_COND_2<4>
+    SLICE_X53Y69.Y       Tbyy                  0.850   lcd/mux7_5_f8
+                                                       lcd/mux7_5_f8
+    SLICE_X53Y42.F4      net (fanout=1)        0.988   lcd/mux7_5_f8
+    SLICE_X53Y42.X       Tilo                  0.704   lcd/lcd_code_mux0001<2>25
+                                                       lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.SR      net (fanout=1)        1.385   lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.CLK     Tsrck                 0.910   lcd/lcd_code<3>
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                     10.826ns (3.820ns logic, 7.006ns route)
+                                                       (35.3% logic, 64.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.424ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_3 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.576ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_3 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.XQ      Tcko                  0.592   lcd/Cs<3>
+                                                       lcd/Cs_3
+    SLICE_X54Y44.G1      net (fanout=26)       1.821   lcd/Cs<3>
+    SLICE_X54Y44.Y       Tilo                  0.759   lcd/_COND_2<3>
+                                                       lcd/Msub__COND_2_Madd_xor<3>11
+    SLICE_X52Y69.BY      net (fanout=8)        2.083   lcd/_COND_2<3>
+    SLICE_X52Y69.FX      Tbyfx                 0.813   lcd/mux7_9_f5
+                                                       lcd/mux7_6_f7
+    SLICE_X53Y69.FXINA   net (fanout=1)        0.000   lcd/mux7_6_f7
+    SLICE_X53Y69.Y       Tif6y                 0.521   lcd/mux7_5_f8
+                                                       lcd/mux7_5_f8
+    SLICE_X53Y42.F4      net (fanout=1)        0.988   lcd/mux7_5_f8
+    SLICE_X53Y42.X       Tilo                  0.704   lcd/lcd_code_mux0001<2>25
+                                                       lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.SR      net (fanout=1)        1.385   lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.CLK     Tsrck                 0.910   lcd/lcd_code<3>
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                     10.576ns (4.299ns logic, 6.277ns route)
+                                                       (40.6% logic, 59.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.483ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_2 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.517ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_2 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.YQ      Tcko                  0.652   lcd/Cs<3>
+                                                       lcd/Cs_2
+    SLICE_X54Y44.G4      net (fanout=51)       1.702   lcd/Cs<2>
+    SLICE_X54Y44.Y       Tilo                  0.759   lcd/_COND_2<3>
+                                                       lcd/Msub__COND_2_Madd_xor<3>11
+    SLICE_X52Y69.BY      net (fanout=8)        2.083   lcd/_COND_2<3>
+    SLICE_X52Y69.FX      Tbyfx                 0.813   lcd/mux7_9_f5
+                                                       lcd/mux7_6_f7
+    SLICE_X53Y69.FXINA   net (fanout=1)        0.000   lcd/mux7_6_f7
+    SLICE_X53Y69.Y       Tif6y                 0.521   lcd/mux7_5_f8
+                                                       lcd/mux7_5_f8
+    SLICE_X53Y42.F4      net (fanout=1)        0.988   lcd/mux7_5_f8
+    SLICE_X53Y42.X       Tilo                  0.704   lcd/lcd_code_mux0001<2>25
+                                                       lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.SR      net (fanout=1)        1.385   lcd/lcd_code_mux0001<2>25
+    SLICE_X55Y42.CLK     Tsrck                 0.910   lcd/lcd_code<3>
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                     10.517ns (4.359ns logic, 6.158ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point lcd/lcd_code_1 (SLICE_X48Y36.SR), 89 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.359ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_3 (FF)
+  Destination:          lcd/lcd_code_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.641ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_3 to lcd/lcd_code_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.XQ      Tcko                  0.592   lcd/Cs<3>
+                                                       lcd/Cs_3
+    SLICE_X54Y44.G1      net (fanout=26)       1.821   lcd/Cs<3>
+    SLICE_X54Y44.Y       Tilo                  0.759   lcd/_COND_2<3>
+                                                       lcd/Msub__COND_2_Madd_xor<3>11
+    SLICE_X32Y45.BY      net (fanout=8)        2.051   lcd/_COND_2<3>
+    SLICE_X32Y45.FX      Tbyfx                 0.813   lcd/mux5_9_f5
+                                                       lcd/mux5_6_f7
+    SLICE_X33Y45.FXINA   net (fanout=1)        0.000   lcd/mux5_6_f7
+    SLICE_X33Y45.Y       Tif6y                 0.521   lcd/mux5_5_f8
+                                                       lcd/mux5_5_f8
+    SLICE_X48Y37.F2      net (fanout=1)        1.310   lcd/mux5_5_f8
+    SLICE_X48Y37.X       Tilo                  0.759   lcd/lcd_code_mux0001<4>58
+                                                       lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.SR      net (fanout=1)        1.105   lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.CLK     Tsrck                 0.910   lcd/lcd_code<1>
+                                                       lcd/lcd_code_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.641ns (4.354ns logic, 6.287ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.418ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_2 (FF)
+  Destination:          lcd/lcd_code_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.582ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_2 to lcd/lcd_code_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.YQ      Tcko                  0.652   lcd/Cs<3>
+                                                       lcd/Cs_2
+    SLICE_X54Y44.G4      net (fanout=51)       1.702   lcd/Cs<2>
+    SLICE_X54Y44.Y       Tilo                  0.759   lcd/_COND_2<3>
+                                                       lcd/Msub__COND_2_Madd_xor<3>11
+    SLICE_X32Y45.BY      net (fanout=8)        2.051   lcd/_COND_2<3>
+    SLICE_X32Y45.FX      Tbyfx                 0.813   lcd/mux5_9_f5
+                                                       lcd/mux5_6_f7
+    SLICE_X33Y45.FXINA   net (fanout=1)        0.000   lcd/mux5_6_f7
+    SLICE_X33Y45.Y       Tif6y                 0.521   lcd/mux5_5_f8
+                                                       lcd/mux5_5_f8
+    SLICE_X48Y37.F2      net (fanout=1)        1.310   lcd/mux5_5_f8
+    SLICE_X48Y37.X       Tilo                  0.759   lcd/lcd_code_mux0001<4>58
+                                                       lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.SR      net (fanout=1)        1.105   lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.CLK     Tsrck                 0.910   lcd/lcd_code<1>
+                                                       lcd/lcd_code_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.582ns (4.414ns logic, 6.168ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.575ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_1 (FF)
+  Destination:          lcd/lcd_code_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      10.425ns (Levels of Logic = 5)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_1 to lcd/lcd_code_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y34.XQ      Tcko                  0.592   lcd/Cs<1>
+                                                       lcd/Cs_1
+    SLICE_X33Y44.BX      net (fanout=96)       3.812   lcd/Cs<1>
+    SLICE_X33Y44.F5      Tbxf5                 0.589   lcd/mux5_9_f51
+                                                       lcd/mux5_9_f5_0
+    SLICE_X33Y44.FXINA   net (fanout=1)        0.000   lcd/mux5_9_f51
+    SLICE_X33Y44.FX      Tinafx                0.463   lcd/mux5_9_f51
+                                                       lcd/mux5_8_f6
+    SLICE_X32Y45.FXINB   net (fanout=1)        0.000   lcd/mux5_8_f6
+    SLICE_X32Y45.FX      Tinbfx                0.364   lcd/mux5_9_f5
+                                                       lcd/mux5_6_f7
+    SLICE_X33Y45.FXINA   net (fanout=1)        0.000   lcd/mux5_6_f7
+    SLICE_X33Y45.Y       Tif6y                 0.521   lcd/mux5_5_f8
+                                                       lcd/mux5_5_f8
+    SLICE_X48Y37.F2      net (fanout=1)        1.310   lcd/mux5_5_f8
+    SLICE_X48Y37.X       Tilo                  0.759   lcd/lcd_code_mux0001<4>58
+                                                       lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.SR      net (fanout=1)        1.105   lcd/lcd_code_mux0001<4>58
+    SLICE_X48Y36.CLK     Tsrck                 0.910   lcd/lcd_code<1>
+                                                       lcd/lcd_code_1
+    -------------------------------------------------  ---------------------------
+    Total                                     10.425ns (4.198ns logic, 6.227ns route)
+                                                       (40.3% logic, 59.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point lcd/lcd_code_3 (SLICE_X55Y42.F2), 74 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     10.019ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_2 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.981ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_2 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.YQ      Tcko                  0.652   lcd/Cs<3>
+                                                       lcd/Cs_2
+    SLICE_X49Y44.F3      net (fanout=51)       2.274   lcd/Cs<2>
+    SLICE_X49Y44.X       Tilo                  0.704   lcd/_COND_3<4>
+                                                       lcd/Msub__COND_3_Madd_xor<4>11
+    SLICE_X65Y69.BY      net (fanout=7)        2.872   lcd/_COND_3<4>
+    SLICE_X65Y69.Y       Tbyy                  0.850   lcd/mux3_5_f8
+                                                       lcd/mux3_5_f8
+    SLICE_X55Y42.F2      net (fanout=1)        1.792   lcd/mux3_5_f8
+    SLICE_X55Y42.CLK     Tfck                  0.837   lcd/lcd_code<3>
+                                                       lcd/lcd_code_mux0001<2>541
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                      9.981ns (3.043ns logic, 6.938ns route)
+                                                       (30.5% logic, 69.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.088ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_1 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.912ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_1 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y34.XQ      Tcko                  0.592   lcd/Cs<1>
+                                                       lcd/Cs_1
+    SLICE_X49Y44.F4      net (fanout=96)       2.265   lcd/Cs<1>
+    SLICE_X49Y44.X       Tilo                  0.704   lcd/_COND_3<4>
+                                                       lcd/Msub__COND_3_Madd_xor<4>11
+    SLICE_X65Y69.BY      net (fanout=7)        2.872   lcd/_COND_3<4>
+    SLICE_X65Y69.Y       Tbyy                  0.850   lcd/mux3_5_f8
+                                                       lcd/mux3_5_f8
+    SLICE_X55Y42.F2      net (fanout=1)        1.792   lcd/mux3_5_f8
+    SLICE_X55Y42.CLK     Tfck                  0.837   lcd/lcd_code<3>
+                                                       lcd/lcd_code_mux0001<2>541
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                      9.912ns (2.983ns logic, 6.929ns route)
+                                                       (30.1% logic, 69.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     10.461ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               lcd/Cs_2 (FF)
+  Destination:          lcd/lcd_code_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      9.539ns (Levels of Logic = 4)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: lcd/Cs_2 to lcd/lcd_code_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y32.YQ      Tcko                  0.652   lcd/Cs<3>
+                                                       lcd/Cs_2
+    SLICE_X49Y44.G3      net (fanout=51)       2.308   lcd/Cs<2>
+    SLICE_X49Y44.Y       Tilo                  0.704   lcd/_COND_3<4>
+                                                       lcd/Msub__COND_3_Madd_xor<3>11
+    SLICE_X64Y71.BY      net (fanout=10)       1.912   lcd/_COND_3<3>
+    SLICE_X64Y71.FX      Tbyfx                 0.813   lcd/mux3_10_f51
+                                                       lcd/mux3_7_f7
+    SLICE_X65Y69.FXINB   net (fanout=1)        0.000   lcd/mux3_7_f7
+    SLICE_X65Y69.Y       Tif6y                 0.521   lcd/mux3_5_f8
+                                                       lcd/mux3_5_f8
+    SLICE_X55Y42.F2      net (fanout=1)        1.792   lcd/mux3_5_f8
+    SLICE_X55Y42.CLK     Tfck                  0.837   lcd/lcd_code<3>
+                                                       lcd/lcd_code_mux0001<2>541
+                                                       lcd/lcd_code_3
+    -------------------------------------------------  ---------------------------
+    Total                                      9.539ns (3.527ns logic, 6.012ns route)
+                                                       (37.0% logic, 63.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point lcd/lcd_rs (SLICE_X67Y28.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.983ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               lcd/lcd_code_5 (FF)
+  Destination:          lcd/lcd_rs (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.986ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.057 - 0.054)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: lcd/lcd_code_5 to lcd/lcd_rs
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X64Y28.XQ      Tcko                  0.474   lcd/lcd_code<5>
+                                                       lcd/lcd_code_5
+    SLICE_X67Y28.BY      net (fanout=1)        0.377   lcd/lcd_code<5>
+    SLICE_X67Y28.CLK     Tckdi       (-Th)    -0.135   lcd/lcd_rs
+                                                       lcd/lcd_rs
+    -------------------------------------------------  ---------------------------
+    Total                                      0.986ns (0.609ns logic, 0.377ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock/clk_hz (SLICE_X33Y83.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.245ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               clock/clk_hz (FF)
+  Destination:          clock/clk_hz (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.245ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: clock/clk_hz to clock/clk_hz
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y83.YQ      Tcko                  0.470   clock/clk_hz1
+                                                       clock/clk_hz
+    SLICE_X33Y83.BY      net (fanout=2)        0.640   clock/clk_hz1
+    SLICE_X33Y83.CLK     Tckdi       (-Th)    -0.135   clock/clk_hz1
+                                                       clock/clk_hz
+    -------------------------------------------------  ---------------------------
+    Total                                      1.245ns (0.605ns logic, 0.640ns route)
+                                                       (48.6% logic, 51.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point lcd/delay_state_FSM_FFd2 (SLICE_X65Y5.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.415ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               lcd/delay_state_FSM_FFd2 (FF)
+  Destination:          lcd/delay_state_FSM_FFd2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: lcd/delay_state_FSM_FFd2 to lcd/delay_state_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y5.XQ       Tcko                  0.473   lcd/delay_state_FSM_FFd2
+                                                       lcd/delay_state_FSM_FFd2
+    SLICE_X65Y5.F4       net (fanout=8)        0.426   lcd/delay_state_FSM_FFd2
+    SLICE_X65Y5.CLK      Tckf        (-Th)    -0.516   lcd/delay_state_FSM_FFd2
+                                                       lcd/delay_state_FSM_FFd2-In1
+                                                       lcd/delay_state_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.415ns (0.989ns logic, 0.426ns route)
+                                                       (69.9% logic, 30.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: lcd/lcd_code<5>/CLK
+  Logical resource: lcd/lcd_code_5/CK
+  Location pin: SLICE_X64Y28.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: lcd/lcd_code<5>/CLK
+  Logical resource: lcd/lcd_code_5/CK
+  Location pin: SLICE_X64Y28.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 18.348ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: lcd/lcd_code<5>/CLK
+  Logical resource: lcd/lcd_code_5/CK
+  Location pin: SLICE_X64Y28.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   10.826|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 9114 paths, 0 nets, and 1369 connections
+
+Design statistics:
+   Minimum period:  10.826ns{1}   (Maximum frequency:  92.370MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Oct 11 07:37:22 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4506 MB
+
+
+

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Counter4bit/counter4bit.xst" -ofn "G:/HK7/IClab/W3/lab/Counter4bit/counter4bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 counter4bit.ngc counter4bit.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o counter4bit_map.ncd counter4bit.ngd counter4bit.pcf 
+par -w -intstyle ise -ol high -t 1 counter4bit_map.ncd counter4bit.ncd counter4bit.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter4bit.twx counter4bit.ncd -o counter4bit.twr counter4bit.pcf 
+bitgen -intstyle ise -f counter4bit.ut counter4bit.ncd 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/ex7/TOP.xst" -ofn "G:/HK7/IClab/W3/lab/ex7/TOP.syr" 

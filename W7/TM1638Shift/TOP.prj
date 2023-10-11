@@ -1,0 +1,4 @@
+verilog work "TM1638.v"
+verilog work "shift.v"
+verilog work "Clock_Div.v"
+verilog work "TOP.v"

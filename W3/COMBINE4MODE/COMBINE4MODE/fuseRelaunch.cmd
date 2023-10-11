@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP_isim_beh.exe" -prj "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP_beh.prj" "work.TEST_TOP" "work.glbl" 

@@ -1,0 +1,34 @@
+
+
+NET "clki" LOC = C9;
+NET "clko" LOC = F8;
+NET "dio" LOC = C7;
+NET "stb" LOC = E8;
+NET "s0" LOC = L13;
+NET "s1" LOC = L14;
+
+
+
+NET "clki" IOSTANDARD = LVCMOS33;
+NET "clko" IOSTANDARD = LVCMOS33;
+NET "dio" IOSTANDARD = LVCMOS33;
+NET "s0" IOSTANDARD = LVCMOS33;
+NET "s1" IOSTANDARD = LVCMOS33;
+
+NET "stb" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "s[0]" LOC = H18;
+
+# PlanAhead Generated IO constraints 
+
+NET "s[0]" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "s[1]" LOC = N17;
+
+# PlanAhead Generated IO constraints 
+
+NET "s[1]" IOSTANDARD = LVCMOS33;

@@ -1,0 +1,28 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "freq_sel[1]" LOC = N17;
+NET "freq_sel[0]" LOC = H18;
+NET "mode_sel[1]" LOC = L14;
+NET "mode_sel[0]" LOC = L13;
+NET "OUT[0]" LOC = F12;
+NET "OUT[1]" LOC = E12;
+NET "OUT[2]" LOC = E11;
+NET "OUT[3]" LOC = F11;
+NET "OUT[4]" LOC = C11;
+NET "OUT[5]" LOC = D11;
+NET "OUT[6]" LOC = E9;
+NET "OUT[7]" LOC = F9;
+NET "clk" LOC = C9;
+NET "reset" LOC = D18;
+
+# PlanAhead Generated IO constraints 
+
+NET "OUT[7]" DRIVE = 8;
+NET "OUT[6]" DRIVE = 8;
+NET "OUT[5]" DRIVE = 8;
+NET "OUT[4]" DRIVE = 8;
+NET "OUT[3]" DRIVE = 8;
+NET "OUT[2]" DRIVE = 8;
+NET "OUT[1]" DRIVE = 8;
+NET "OUT[0]" DRIVE = 8;

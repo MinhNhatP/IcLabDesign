@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W1/lab2/Decoder38/decode38.xst" -ofn "G:/HK7/IClab/W1/lab2/Decoder38/decode38.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 decode38.ngc decode38.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o decode38_map.ncd decode38.ngd decode38.pcf 
+par -w -intstyle ise -ol high -t 1 decode38_map.ncd decode38.ncd decode38.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decode38.twx decode38.ncd -o decode38.twr decode38.pcf 
+xst -intstyle ise -ifn "G:/HK7/IClab/W1/lab2/Decoder38/decode38.xst" -ofn "G:/HK7/IClab/W1/lab2/Decoder38/decode38.syr" 

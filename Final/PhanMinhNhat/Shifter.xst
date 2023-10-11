@@ -1,0 +1,5 @@
+set -tmpdir "G:/HK7/IClab/Final/PhanMinhNhat/xst/projnav.tmp"
+set -xsthdpdir "G:/HK7/IClab/Final/PhanMinhNhat/xst"
+elaborate
+-ifn Shifter.prj
+-ifmt mixed

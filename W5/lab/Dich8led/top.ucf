@@ -1,0 +1,20 @@
+
+
+NET "clk_50M" LOC = C9;
+NET "reset" LOC = L13;
+NET "clk" LOC = F8;
+NET "stb" LOC = E8;
+
+NET "dio" LOC = C7;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clk_50M" IOSTANDARD = LVCMOS33;
+NET "reset" IOSTANDARD = LVCMOS33;
+NET "dio" IOSTANDARD = LVCMOS33;
+NET "stb" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = F8;

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\HK7\IClab\W5\lab\Counter7Seg\PhanMinhNhat.ncd
+OUTFILE=G:\HK7\IClab\W5\lab\Counter7Seg\PhanMinhNhat.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=G:\HK7\IClab\W5\lab\Counter7Seg
+LICENSE=WebPack
+USER_INFO=__0_0_0

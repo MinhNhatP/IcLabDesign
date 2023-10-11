@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;LCDTest.v&quot; line 33 </arg>&apos;<arg fmt="%s" index="2">I3</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;LCDTest.v&quot; line 33 </arg>&apos;<arg fmt="%s" index="2">I2</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;LCDTest.v&quot; line 33 </arg>&apos;<arg fmt="%s" index="2">I1</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;LCDTest.v&quot; line 33 </arg>&apos;<arg fmt="%s" index="2">I0</arg>&apos; has not been declared
+</msg>
+
+</messages>
+

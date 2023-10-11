@@ -1,0 +1,29 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP_isim_beh.exe -prj G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP_beh.prj work.TEST_TOP work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/MODE4_SANGDON.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/MODE3_LEDCHAY_TRAIPHAI.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/MODE2_LEDSANGDAN_TATDAN.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/MODE1_LEDCHOPTAT.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/DIV_CLK_4_MODE.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TOP.v" into library work
+Analyzing Verilog file "G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module DIV_CLK_4_MODE
+Compiling module MODE1_LEDCHOPTAT
+Compiling module MODE2_LEDSANGDAN_TATDAN
+Compiling module MODE3_LEDCHAY_TRAIPHAI
+Compiling module MODE4_SANGDON
+Compiling module TOP
+Compiling module TEST_TOP
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable G:/HK7/IClab/W3/COMBINE4MODE/COMBINE4MODE/TEST_TOP_isim_beh.exe
+Fuse Memory Usage: 28960 KB
+Fuse CPU Usage: 359 ms

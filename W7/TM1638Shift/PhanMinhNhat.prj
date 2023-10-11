@@ -1,0 +1,6 @@
+verilog work "add3.v"
+verilog work "TM1638.v"
+verilog work "HEX_BCD.v"
+verilog work "Counter.v"
+verilog work "Clock_Div.v"
+verilog work "PhanMinhNhat.v"

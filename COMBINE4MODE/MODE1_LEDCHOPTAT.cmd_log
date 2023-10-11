@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/ise/COMBINE4MODE/MODE1_LEDCHOPTAT.xst" -ofn "/home/ise/COMBINE4MODE/MODE1_LEDCHOPTAT.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 MODE1_LEDCHOPTAT.ngc MODE1_LEDCHOPTAT.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o MODE1_LEDCHOPTAT_map.ncd MODE1_LEDCHOPTAT.ngd MODE1_LEDCHOPTAT.pcf 
+par -w -intstyle ise -ol high -t 1 MODE1_LEDCHOPTAT_map.ncd MODE1_LEDCHOPTAT.ncd MODE1_LEDCHOPTAT.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml MODE1_LEDCHOPTAT.twx MODE1_LEDCHOPTAT.ncd -o MODE1_LEDCHOPTAT.twr MODE1_LEDCHOPTAT.pcf 

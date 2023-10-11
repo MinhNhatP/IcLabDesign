@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=G:\HK7\IClab\W3\lab\Divide4f\DIVIDE_4F.ncd
+OUTFILE=G:\HK7\IClab\W3\lab\Divide4f\DIVIDE_4F.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=G:\HK7\IClab\W3\lab\Divide4f
+LICENSE=WebPack
+USER_INFO=__0_0_0

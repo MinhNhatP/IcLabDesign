@@ -1,0 +1,5 @@
+verilog work "ShiftLed.v"
+verilog work "Divide4f.v"
+verilog work "Top.v"
+verilog work "testBench.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

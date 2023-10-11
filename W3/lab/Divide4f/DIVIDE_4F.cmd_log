@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.xst" -ofn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc divide4f.ucf -p xc3s500e-fg320-4 DIVIDE_4F.ngc DIVIDE_4F.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o DIVIDE_4F_map.ncd DIVIDE_4F.ngd DIVIDE_4F.pcf 
+par -w -intstyle ise -ol high -t 1 DIVIDE_4F_map.ncd DIVIDE_4F.ncd DIVIDE_4F.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DIVIDE_4F.twx DIVIDE_4F.ncd -o DIVIDE_4F.twr DIVIDE_4F.pcf -ucf divide4f.ucf 
+bitgen -intstyle ise -f DIVIDE_4F.ut DIVIDE_4F.ncd 
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.xst" -ofn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc divide4f.ucf -p xc3s500e-fg320-4 DIVIDE_4F.ngc DIVIDE_4F.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o DIVIDE_4F_map.ncd DIVIDE_4F.ngd DIVIDE_4F.pcf 
+par -w -intstyle ise -ol high -t 1 DIVIDE_4F_map.ncd DIVIDE_4F.ncd DIVIDE_4F.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DIVIDE_4F.twx DIVIDE_4F.ncd -o DIVIDE_4F.twr DIVIDE_4F.pcf -ucf divide4f.ucf 
+bitgen -intstyle ise -f DIVIDE_4F.ut DIVIDE_4F.ncd 
+xst -intstyle ise -ifn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.xst" -ofn "G:/HK7/IClab/W3/lab/Divide4f/DIVIDE_4F.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc divide4f.ucf -p xc3s500e-fg320-4 DIVIDE_4F.ngc DIVIDE_4F.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o DIVIDE_4F_map.ncd DIVIDE_4F.ngd DIVIDE_4F.pcf 
+par -w -intstyle ise -ol high -t 1 DIVIDE_4F_map.ncd DIVIDE_4F.ncd DIVIDE_4F.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml DIVIDE_4F.twx DIVIDE_4F.ncd -o DIVIDE_4F.twr DIVIDE_4F.pcf -ucf divide4f.ucf 
+bitgen -intstyle ise -f DIVIDE_4F.ut DIVIDE_4F.ncd 

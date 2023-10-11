@@ -1,0 +1,31 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/COMBINE4MODE/TEST_TOP_isim_beh.exe" -prj "/home/ise/COMBINE4MODE/TEST_TOP_beh.prj" "work.TEST_TOP" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/COMBINE4MODE/MODE4_SANGDON.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/MODE3_LEDCHAY_TRAIPHAI.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/MODE2_LEDSANGDAN_TATDAN.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/MODE1_LEDCHOPTAT.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/DIV_CLK_4_MODE.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/TOP.v" into library work
+Analyzing Verilog file "/home/ise/COMBINE4MODE/TEST_TOP.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94928 KB
+Fuse CPU Usage: 1940 ms
+Compiling module DIV_CLK_4_MODE
+Compiling module MODE1_LEDCHOPTAT
+Compiling module MODE2_LEDSANGDAN_TATDAN
+Compiling module MODE3_LEDCHAY_TRAIPHAI
+Compiling module MODE4_SANGDON
+Compiling module TOP
+Compiling module TEST_TOP
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 8 Verilog Units
+Built simulation executable /home/ise/COMBINE4MODE/TEST_TOP_isim_beh.exe
+Fuse Memory Usage: 98084 KB
+Fuse CPU Usage: 1970 ms
+GCC CPU Usage: 210 ms
